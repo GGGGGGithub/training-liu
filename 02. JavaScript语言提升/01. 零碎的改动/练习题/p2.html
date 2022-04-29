@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 点击该按钮输出 1 -->
+    <button>show my index</button>
+    <!-- 点击该按钮输出 2，依次类推 -->
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+    <button>show my index</button>
+
+    <script>
+      // 遍历所有按钮，注册点击事件，当点击时输出一个数字，该数字表示点的是第几个按钮
+      var btns=document.querySelectorAll('button')
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick=function(){
+          console.log(i)
+        }
+      }
+
+//       在for循环中使用var，因为var是全局变量，所以循环结束后值会被覆盖掉。
+// 比如： 初始值i=0; i<3那么最后循环结束后i的值就会也只能是3,
+    </script>
+  </body>
+</html>

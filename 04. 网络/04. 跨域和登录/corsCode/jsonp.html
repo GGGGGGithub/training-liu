@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="http://mock.duyiedu.com/api/user/avatar?uid=163" alt="" width="100">
+
+    <script>
+        const requestFn = (res) => {
+            console.log(res)
+        }
+        const script = document.createElement('script');
+        /* 请求地址 */
+        script.src = 'https://duyi.hyfarsight.com/test/study/jsonpInterface?callback=requestFn&name=alan&age=20'
+        document.body.appendChild(script)
+    </script>
+</body>
+
+</html>

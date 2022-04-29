@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <script>
+      // 下面的代码输出结果是什么
+      console.log(1);
+      setTimeout(() => {
+        console.log(2);
+      }, 0);
+      const div = document.querySelector('#container');
+      const observer = new MutationObserver(() => {
+        console.log(3);
+        setTimeout(() => {
+          console.log(4);
+        }, 0);
+      });
+      observer.observe(div, {
+        attributes: true, //监听属性的变化
+        childList: true, //监听子元素的变化
+        subtree: true, //监听子树的变化
+      });
+      console.log(5);
+      div.innerHTML = `Hello`;
+      console.log(6);
+    </script>
+  </body>
+</html>

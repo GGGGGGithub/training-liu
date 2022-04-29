@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      var app = document.getElementById('app');
+      setTimeout(() => {
+        console.log(1);
+      }, 0);
+      const observer = new MutationObserver(() => {
+        console.log(2);
+      });
+      observer.observe(app, {
+        attributes: true, //监听属性的变化
+        childList: true, //监听子元素的变化
+        subtree: true, //监听子树的变化
+      });
+      app.innerHTML = 'Hello';
+      console.log(3);
+    </script>
+  </body>
+</html>

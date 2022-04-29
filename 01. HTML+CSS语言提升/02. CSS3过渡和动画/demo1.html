@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #f40;
+        transition: 500ms 1s;
+        /*   transition: .5s; */
+        /* transition: 过渡属性 持续时间 过渡函数 过渡延迟(等一秒钟再过渡)
+        transition: width 500ms ease-in 1s
+        */
+      }
+      .box:hover {
+        width: 200px;
+        height: 200px;
+        /*transition: 500ms 1s 不加在hover里 */ 
+        background: #008c8c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
